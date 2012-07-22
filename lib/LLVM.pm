@@ -1,6 +1,6 @@
 package LLVM;
 {
-  $LLVM::VERSION = '0.01';
+  $LLVM::VERSION = '0.02';
 }
 
 use strict;
@@ -15,7 +15,7 @@ LLVM - Perl bindings to the Low Level Virtual Machine
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 SYNOPSIS
 
@@ -26,10 +26,10 @@ version 0.01
     my $mod = LLVM::Module -> new($ctx, "synopsis");
 
     # create a new function type that takes 2 ints and returns one int
-    my $intt = LLVM::Type -> int($ctx);
+    my $intt = LLVM::Type -> int($ctx, 32);
     my $funt = LLVM::Type -> func($intt, $intt, $intt);
 
-    # add a new functionto the module with the just-created type
+    # add a new function to the module with the just-created type
     my $fun = $mod -> add_func("add", $funt);
 
     # set function's parameters names
@@ -58,6 +58,20 @@ The output should look like this:
       %tmp = add i32 %x, %y
       ret i32 %tmp
     }
+
+Once the module is created, it can be compiled in-memory and executed:
+
+    # create the arguments for the function call
+    my $arg1 = LLVM::GenericValue -> int($intt, 5);
+    my $arg2 = LLVM::GenericValue -> int($intt, 10);
+
+    # create an execution engine for the module
+    my $eng = LLVM::ExecutionEngine -> new($mod);
+
+    # call the function "add" and print the result
+    my $result = $eng -> run_func($fun, $arg1, $arg2);
+
+    say $result -> to_int;
 
 =head1 DESCRIPTION
 

@@ -1,6 +1,6 @@
 package LLVM::Module;
 {
-  $LLVM::Module::VERSION = '0.01';
+  $LLVM::Module::VERSION = '0.02';
 }
 
 use strict;
@@ -12,11 +12,11 @@ LLVM::Module - LLVM module class
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 DESCRIPTION
 
-Some description here...
+A C<LLVM::Module> is the top-level container for all the LLVM IR objects.
 
 =head1 METHODS
 

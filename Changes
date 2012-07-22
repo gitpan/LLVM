@@ -3,7 +3,47 @@ Changes from 2011-07-23 00:00:00 +0000 to present.
 ==================================================
 
 -----------------------------------------
-version 0.01 at 2012-07-22 11:26:08 +0000
+version 0.02 at 2012-07-22 13:32:13 +0000
+-----------------------------------------
+
+  Change: 24810952ae2e0663b711f45bf4f7644dfd034961
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-07-22 15:32:00 +0000
+
+    ExecutionEngine.xs: implement the LLVM execution engine class 
+
+  Change: a030f8b145be36741b9e405e3023be3bc8049ff5
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-07-22 15:32:00 +0000
+
+    GenericValue.xs: implement the LLVM generic value class 
+
+  Change: 5e6365cc1ef0d6507a2b5c4560e0f8dd34b2b2d8
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-07-22 14:39:24 +0000
+
+    01-basic.t: test the dumped LLVM IR 
+
+  Change: ef25c0d9803ba4ce721030568b419b75cd9884ba
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-07-22 14:29:06 +0000
+
+    Builder.xs: add more instructions 
+
+  Change: cd496a1c9a4de4fc141e2a37fdb730e8b296173d
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-07-22 13:46:27 +0000
+
+    lib/LLVM: add descriptions 
+
+  Change: 0f56f9a113057e374c39f902b81eb92bc51648f9
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-07-22 13:30:14 +0000
+
+    LLVM.pm: fix typos in synopsis 
+
+-----------------------------------------
+version 0.01 at 2012-07-22 11:25:59 +0000
 -----------------------------------------
 
   Change: c3b88fe7a9a567d4605b1833090af59e70d9d675

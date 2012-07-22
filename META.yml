@@ -5,6 +5,7 @@ author:
 build_requires:
   File::Find: 0
   File::Temp: 0
+  IO::CaptureOutput: 0
   Test::More: 0
 configure_requires:
   Devel::CheckLib: 0
@@ -24,7 +25,7 @@ resources:
   bugtracker: https://github.com/AlexBio/p5-LLVM/issues
   homepage: http://metacpan.org/release/LLVM/
   repository: git://github.com/AlexBio/p5-LLVM.git
-version: 0.01
+version: 0.02
 x_Dist_Zilla:
   plugins:
     -

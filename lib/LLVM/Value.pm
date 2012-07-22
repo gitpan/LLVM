@@ -1,6 +1,6 @@
 package LLVM::Value;
 {
-  $LLVM::Value::VERSION = '0.01';
+  $LLVM::Value::VERSION = '0.02';
 }
 
 use strict;
@@ -12,11 +12,11 @@ LLVM::Value - LLVM value class
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 DESCRIPTION
 
-Some description here...
+A C<LLVM::Value> represents an individual value in the LLVM IR.
 
 =head1 METHODS
 

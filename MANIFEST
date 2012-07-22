@@ -13,6 +13,8 @@ inc/MakeMaker.pm
 lib/LLVM.pm
 lib/LLVM/Builder.pm
 lib/LLVM/Context.pm
+lib/LLVM/ExecutionEngine.pm
+lib/LLVM/GenericValue.pm
 lib/LLVM/Module.pm
 lib/LLVM/Type.pm
 lib/LLVM/Value.pm
@@ -24,6 +26,8 @@ t/release-pod-syntax.t
 typemap
 xs/Builder.xs
 xs/Context.xs
+xs/ExecutionEngine.xs
+xs/GenericValue.xs
 xs/Module.xs
 xs/Type.xs
 xs/Value.xs

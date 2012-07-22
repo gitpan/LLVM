@@ -1,6 +1,6 @@
-package LLVM::Context;
+package LLVM::ExecutionEngine;
 {
-  $LLVM::Context::VERSION = '0.02';
+  $LLVM::ExecutionEngine::VERSION = '0.02';
 }
 
 use strict;
@@ -8,7 +8,7 @@ use warnings;
 
 =head1 NAME
 
-LLVM::Context - LLVM context class
+LLVM::ExecutionEngine - LLVM execution engine class
 
 =head1 VERSION
 
@@ -16,13 +16,18 @@ version 0.02
 
 =head1 DESCRIPTION
 
-A C<LLVM::Context> is the top-level container for all LLVM global data.
+A C<LLVM::ExecutionEngine> represents a LLVM JIT engine.
 
 =head1 METHODS
 
-=head2 new( )
+=head2 new( $mod )
 
-Create a new C<LLVM::Context> object.
+Create a new C<LLVM::ExecutionEngine> for the L<LLVM::Module> C<$mod>.
+
+=head2 run_func( $func [, $arg ... ] )
+
+Run the function C<$func> (of type L<LLVM::Value>) with the given arguments of
+type L<LLVM::GenericValue>.
 
 =head1 AUTHOR
 
@@ -40,4 +45,4 @@ See http://dev.perl.org/licenses/ for more information.
 
 =cut
 
-1; # End of LLVM::Context
+1; # End of LLVM::ExecutionEngine
