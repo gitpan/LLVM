@@ -3,7 +3,65 @@ Changes from 2011-07-23 00:00:00 +0000 to present.
 ==================================================
 
 -----------------------------------------
-version 0.02 at 2012-07-22 13:32:13 +0000
+version 0.03 at 2012-07-22 18:47:21 +0000
+-----------------------------------------
+
+  Change: 36ef4d028e1dcc5fc1f314319dc74f566a269c8f
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-07-22 20:47:07 +0000
+
+    PassManager.pm: ignore Pod::Coverage false positives 
+
+  Change: 913e1e92bc39c8ef6861e4e60e2bc3a8aa091624
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-07-22 20:40:22 +0000
+
+    TODO++ 
+
+  Change: 8cb4613e2e3fa99448424c96176ff536d6004dc1
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-07-22 20:40:22 +0000
+
+    lib: improve pass and transform docs 
+
+  Change: 10c43b9220864ec3889d40d100779d4f1bf6bb66
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-07-22 20:40:22 +0000
+
+    PassManager.xs: implement LLVM IPO transformations class 
+
+  Change: 5e8e26542846161a96d68d6b04bb5ed0b1d1f3e6
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-07-22 20:10:49 +0000
+
+    PassManager.xs: implement LLVM pass manager class 
+
+  Change: 91860da9f58940ae96b26d34438a6e006ca16095
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-07-22 19:41:53 +0000
+
+    Builder.xs: add *cmp and cond instructions 
+
+  Change: d894d3ad3f56da3f43bc151262b1074e96f74629
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-07-22 18:44:58 +0000
+
+    xs: remove newline after OUTPUT 
+
+  Change: 24b48f6f372cf190bd852bb6ffbce9eac67b6b54
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-07-22 16:03:23 +0000
+
+    LLVM.pm: add note about LLVM version 
+
+  Change: f9b0111476d7d1bff71f2f22a2ae162a1054f53f
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-07-22 15:58:40 +0000
+
+    MakeMaker.pm: fix LLVM config script name 
+
+-----------------------------------------
+version 0.02 at 2012-07-22 13:32:00 +0000
 -----------------------------------------
 
   Change: 24810952ae2e0663b711f45bf4f7644dfd034961

@@ -1,6 +1,6 @@
 package LLVM::Type;
 {
-  $LLVM::Type::VERSION = '0.02';
+  $LLVM::Type::VERSION = '0.03';
 }
 
 use strict;
@@ -12,7 +12,7 @@ LLVM::Type - LLVM type class
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 DESCRIPTION
 

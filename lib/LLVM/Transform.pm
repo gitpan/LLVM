@@ -1,6 +1,6 @@
-package LLVM::Context;
+package LLVM::Transform;
 {
-  $LLVM::Context::VERSION = '0.03';
+  $LLVM::Transform::VERSION = '0.03';
 }
 
 use strict;
@@ -8,7 +8,7 @@ use warnings;
 
 =head1 NAME
 
-LLVM::Context - LLVM context class
+LLVM::Transform - LLVM transformation class
 
 =head1 VERSION
 
@@ -16,13 +16,16 @@ version 0.03
 
 =head1 DESCRIPTION
 
-A C<LLVM::Context> is the top-level container for all LLVM global data.
+The following classes of transformations are available:
 
-=head1 METHODS
+=over 4
 
-=head2 new( )
+=item LLVM::Transform::IPO - interprocedural transformations.
 
-Create a new C<LLVM::Context> object.
+=back
+
+See the L<LLVM reference|http://llvm.org/docs/Passes.html#transforms> for more
+information about the single transformations.
 
 =head1 AUTHOR
 
@@ -40,4 +43,4 @@ See http://dev.perl.org/licenses/ for more information.
 
 =cut
 
-1; # End of LLVM::Context
+1; # End of LLVM::Transform

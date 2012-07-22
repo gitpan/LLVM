@@ -25,7 +25,7 @@ resources:
   bugtracker: https://github.com/AlexBio/p5-LLVM/issues
   homepage: http://metacpan.org/release/LLVM/
   repository: git://github.com/AlexBio/p5-LLVM.git
-version: 0.02
+version: 0.03
 x_Dist_Zilla:
   plugins:
     -
