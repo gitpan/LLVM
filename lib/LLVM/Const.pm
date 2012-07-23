@@ -1,6 +1,6 @@
-package LLVM::ExecutionEngine;
+package LLVM::Const;
 {
-  $LLVM::ExecutionEngine::VERSION = '0.04';
+  $LLVM::Const::VERSION = '0.04';
 }
 
 use strict;
@@ -8,7 +8,7 @@ use warnings;
 
 =head1 NAME
 
-LLVM::ExecutionEngine - LLVM execution engine class
+LLVM::Const - LLVM const value class
 
 =head1 VERSION
 
@@ -16,18 +16,22 @@ version 0.04
 
 =head1 DESCRIPTION
 
-A C<LLVM::ExecutionEngine> represents a LLVM JIT engine.
+Some description here...
 
 =head1 METHODS
 
-=head2 new( $mod )
+=head2 int( $int_type, $value )
 
-Create a new C<LLVM::ExecutionEngine> for the L<LLVM::Module> C<$mod>.
+Create a new constant integer L<LLVM::Value> with value C<$value>.
 
-=head2 run_func( $func [, $arg ... ] )
+=head2 real( $real_type, $value )
 
-Run the function C<$func> (of type L<LLVM::Value>) with the given arguments of
-type L<LLVM::GenericValue>.
+Create a new constant real L<LLVM::Value> with value C<$value>.
+
+=head2 string( $ctx, $value )
+
+Create a new constant string L<LLVM::Value> with value C<$value> given a
+L<LLVM::Context>.
 
 =head1 AUTHOR
 
@@ -45,4 +49,4 @@ See http://dev.perl.org/licenses/ for more information.
 
 =cut
 
-1; # End of LLVM::ExecutionEngine
+1; # End of LLVM::Const

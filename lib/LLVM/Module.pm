@@ -1,6 +1,6 @@
 package LLVM::Module;
 {
-  $LLVM::Module::VERSION = '0.03';
+  $LLVM::Module::VERSION = '0.04';
 }
 
 use strict;
@@ -12,7 +12,7 @@ LLVM::Module - LLVM module class
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 DESCRIPTION
 
@@ -27,8 +27,27 @@ representing its id (name).
 
 =head2 add_func( $func_name, $func_type )
 
-Add a function named C<$func_name> with L<LLVM::Type> C<$func_type> to the
-module.
+Add a function named C<$func_name> with L<LLVM::Type> C<$func_type>.
+
+=head2 get_func( $func_name )
+
+Retrieve the L<LLVM::Value> corresponding to the given function.
+
+=head2 del_func( $func )
+
+Delete the given L<LLVM::Value> representing a function.
+
+=head2 add_global( $global_name, $global_type )
+
+Add a global variable named C<$global_name> with L<LLVM::Type> C<$global_type>.
+
+=head2 get_global( $global_name )
+
+Retrieve the L<LLVM::Value> corresponding to the given global variable.
+
+=head2 del_global( $global )
+
+Delete the given L<LLVM::Value> representing a global variable.
 
 =head2 dump( )
 

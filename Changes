@@ -1,9 +1,74 @@
 ==================================================
-Changes from 2011-07-23 00:00:00 +0000 to present.
+Changes from 2011-07-24 00:00:00 +0000 to present.
 ==================================================
 
 -----------------------------------------
-version 0.03 at 2012-07-22 18:47:21 +0000
+version 0.04 at 2012-07-23 10:19:04 +0000
+-----------------------------------------
+
+  Change: c9b10a247cca2479f591e816a31bfe78b14f088c
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-07-23 12:18:48 +0000
+
+    Const.xs: implement LLVM constant values class 
+
+  Change: d75048d7f37d695aac2ab7696e26120afe9027bd
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-07-23 11:48:01 +0000
+
+    Value.xs: add methods for global values 
+
+  Change: a48dcd3bb7df76d64aebfae5fa93e5398c31bbfd
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-07-23 11:48:01 +0000
+
+    Module.xs: add globals and more func-releated methods 
+
+  Change: c33450bd86ac8a674ab8689359b20e06972ad03d
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-07-23 11:48:01 +0000
+
+    01-basic.t: test module dump after passes (just to make sure the
+    passmanager runs) 
+
+  Change: 83910baf75b4f41f0339fb7b37d59f0499b78abc
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-07-23 11:48:01 +0000
+
+    Types.xs: add void type 
+
+  Change: c2ab86bf5d6235caf85a08d03c1e3aa902ef156a
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-07-23 11:48:01 +0000
+
+    TODO: update 
+
+  Change: fb2965c0b874292cb3333f9236e155773ddf3065
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-07-23 10:34:36 +0000
+
+    PassManager.xs: add vectorize transformation pass 
+
+  Change: c3096a925686a27e046a207b9ca515461652f18c
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-07-23 10:30:39 +0000
+
+    PassManager.xs: add scalar transformations passes 
+
+  Change: 2ef86c4f60c2ff597179c286329e1af28478b3fe
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-07-23 10:08:27 +0000
+
+    PassManager.xs: use a single 'add' method to schedule passes 
+
+  Change: 9d6b2e9f9451a1ffe9874e05b7f69d5fcd20e250
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-07-22 20:50:22 +0000
+
+    Transform.pm: add link to L::T::IPO 
+
+-----------------------------------------
+version 0.03 at 2012-07-22 18:47:07 +0000
 -----------------------------------------
 
   Change: 36ef4d028e1dcc5fc1f314319dc74f566a269c8f

@@ -1,6 +1,6 @@
 package LLVM::Type;
 {
-  $LLVM::Type::VERSION = '0.03';
+  $LLVM::Type::VERSION = '0.04';
 }
 
 use strict;
@@ -12,13 +12,17 @@ LLVM::Type - LLVM type class
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 DESCRIPTION
 
 A C<LLVM::Type> represents the type of an individual L<LLVM::Value>.
 
 =head1 METHODS
+
+=head2 void( $ctx )
+
+Create a new C<LLVM::Type> representing a void given a L<LLVM::Context>.
 
 =head2 int( $ctx, $bits )
 

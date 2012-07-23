@@ -43,6 +43,69 @@ EOS
 
 is($stderr, $expected);
 
+my $pass = LLVM::PassManager -> new;
+
+$pass -> add("GlobalDCE");
+$pass -> add("ArgumentPromotion");
+$pass -> add("ConstantMerge");
+$pass -> add("DeadArgElimination");
+$pass -> add("FunctionAttrs");
+$pass -> add("FunctionInlining");
+$pass -> add("AlwaysInliner");
+$pass -> add("GlobalDCE");
+$pass -> add("GlobalOptimizer");
+$pass -> add("IPConstantPropagation");
+$pass -> add("PruneEH");
+$pass -> add("IPSCCP");
+$pass -> add("Internalize");
+$pass -> add("StripDeadPrototypes");
+$pass -> add("StripSymbols");
+$pass -> add("AggressiveDCE");
+$pass -> add("CFGSimplification");
+$pass -> add("DeadStoreElimination");
+$pass -> add("GVN");
+$pass -> add("IndVarSimplify");
+$pass -> add("InstructionCombining");
+$pass -> add("JumpThreading");
+$pass -> add("LICMP");
+$pass -> add("LoopDeletion");
+$pass -> add("LoopIdiom");
+$pass -> add("LoopRotate");
+$pass -> add("LoopUnroll");
+$pass -> add("LoopUnswitch");
+$pass -> add("MemCpyOpt");
+$pass -> add("PromoteMemoryToRegister");
+$pass -> add("Reassociate");
+$pass -> add("SCCP");
+$pass -> add("ScalarReplAggregates");
+$pass -> add("SimplifyLibCall");
+$pass -> add("TailCallElimination");
+$pass -> add("ConstantPropagation");
+$pass -> add("DemoteMemoryToRegoster");
+$pass -> add("Verifier");
+$pass -> add("CorrelatedValuePropagation");
+$pass -> add("EarlyCSE");
+$pass -> add("LowerExpectIntrinsic");
+$pass -> add("TypeBasedAliasAnalysis");
+$pass -> add("BasicAliasAnalysis");
+$pass -> add("BBVectorize");
+
+$pass -> run($mod);
+
+capture { $mod -> dump } \$stdout, \$stderr;
+
+$expected = <<'EOS';
+; ModuleID = 'test1'
+
+define i32 @test1(i32, i32, i32) nounwind readnone {
+  %4 = add i32 %1, %0
+  %5 = mul i32 %4, %2
+  ret i32 %5
+}
+EOS
+
+is($stderr, $expected);
+
 my $arg1 = LLVM::GenericValue -> int($intt, 10);
 my $arg2 = LLVM::GenericValue -> int($intt, 15);
 my $arg3 = LLVM::GenericValue -> int($intt, 20);

@@ -1,6 +1,6 @@
 package LLVM;
 {
-  $LLVM::VERSION = '0.03';
+  $LLVM::VERSION = '0.04';
 }
 
 use strict;
@@ -15,7 +15,7 @@ LLVM - Perl bindings to the Low Level Virtual Machine
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 SYNOPSIS
 
@@ -65,8 +65,8 @@ Once the module is created, a number of optimizations can be applied:
     my $mgr = LLVM::PassManager -> new;
 
     # schedule a couple of passes
-    $mgr -> function_inlining;
-    $mgr -> global_dce;
+    $mgr -> add("FunctionInlining");
+    $mgr -> add("GlobalDCE");
 
     # run the pass manager on the module
     $mgr -> run($mod);

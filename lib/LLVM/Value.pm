@@ -1,6 +1,6 @@
 package LLVM::Value;
 {
-  $LLVM::Value::VERSION = '0.03';
+  $LLVM::Value::VERSION = '0.04';
 }
 
 use strict;
@@ -12,7 +12,7 @@ LLVM::Value - LLVM value class
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 DESCRIPTION
 
@@ -24,7 +24,7 @@ A C<LLVM::Value> represents an individual value in the LLVM IR.
 
 Retrieve the L<LLVM::Type> of the given C<LLVM::Value>.
 
-=head2 set_name( $val_name)
+=head2 set_name( $val_name )
 
 Set the name of the given C<LLVM::Value> to the C<$val_name> string.
 
@@ -35,8 +35,18 @@ representing a function.
 
 =head2 func_append( $ctx, $blk_name )
 
-Append a L<LLVM::BasicBlock> with name C<$blk_name> to the given C<LLVM::Type>
+Append a L<LLVM::BasicBlock> with name C<$blk_name> to the given C<LLVM::Value>
 representing a function.
+
+=head2 global_is_constant( [ $is_constant ] )
+
+Retrieve whether the given global C<LLVM::Value> is constant. If the boolean
+value C<$is_constant> is set, the global is set to constant.
+
+=head2 global_is_threadlocal( [ $is_threadlocal ] )
+
+Retrieve whether the given global C<LLVM::Value> is thread local. If the boolean
+value C<$is_threadlocal> is set, the global is set to constant.
 
 =head1 AUTHOR
 

@@ -3,7 +3,11 @@
 #include "XSUB.h"
 
 #include <llvm-c/Core.h>
+
 #include <llvm-c/Transforms/IPO.h>
+#include <llvm-c/Transforms/Scalar.h>
+#include <llvm-c/Transforms/Vectorize.h>
+
 #include <llvm-c/ExecutionEngine.h>
 
 typedef LLVMContextRef		Context;
@@ -24,6 +28,7 @@ INCLUDE: xs/Context.xs
 INCLUDE: xs/Module.xs
 INCLUDE: xs/Type.xs
 INCLUDE: xs/Value.xs
+INCLUDE: xs/Const.xs
 INCLUDE: xs/Builder.xs
 INCLUDE: xs/PassManager.xs
 

@@ -1,6 +1,6 @@
 package LLVM::PassManager;
 {
-  $LLVM::PassManager::VERSION = '0.03';
+  $LLVM::PassManager::VERSION = '0.04';
 }
 
 use strict;
@@ -12,7 +12,7 @@ LLVM::PassManager - LLVM pass manager class
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 DESCRIPTION
 
@@ -27,12 +27,14 @@ Have a look at L<LLVM::Transform> to see what passes are available.
 
 Create a new whole-module C<LLVM::PassManager>.
 
+=head2 add( $pass )
+
+Schedule the given pass. See L<LLVM::Transform> for a list of available passes.
+
 =head2 run( $mod )
 
 Run all the passes scheduled on the given L<LLVM::Module>. Returns true if any
 of the passes modified the module, false otherwise.
-
-=for Pod::Coverage always_inliner argument_promotion constant_merge dead_arg_elimination function_attrs function_inlining global_dce global_optimizer internalize ip_constant_propagation ipsccp prune_eh strip_dead_prototypes strip_symbols
 
 =head1 AUTHOR
 

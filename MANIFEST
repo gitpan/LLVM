@@ -12,13 +12,13 @@ dist.ini
 inc/MakeMaker.pm
 lib/LLVM.pm
 lib/LLVM/Builder.pm
+lib/LLVM/Const.pm
 lib/LLVM/Context.pm
 lib/LLVM/ExecutionEngine.pm
 lib/LLVM/GenericValue.pm
 lib/LLVM/Module.pm
 lib/LLVM/PassManager.pm
 lib/LLVM/Transform.pm
-lib/LLVM/Transform/IPO.pm
 lib/LLVM/Type.pm
 lib/LLVM/Value.pm
 t/00-compile.t
@@ -29,6 +29,7 @@ t/release-pod-coverage.t
 t/release-pod-syntax.t
 typemap
 xs/Builder.xs
+xs/Const.xs
 xs/Context.xs
 xs/ExecutionEngine.xs
 xs/GenericValue.xs
