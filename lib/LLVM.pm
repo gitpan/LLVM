@@ -1,6 +1,6 @@
 package LLVM;
 {
-  $LLVM::VERSION = '0.04';
+  $LLVM::VERSION = '0.05';
 }
 
 use strict;
@@ -15,7 +15,7 @@ LLVM - Perl bindings to the Low Level Virtual Machine
 
 =head1 VERSION
 
-version 0.04
+version 0.05
 
 =head1 SYNOPSIS
 

@@ -1,6 +1,6 @@
 package LLVM::Const;
 {
-  $LLVM::Const::VERSION = '0.04';
+  $LLVM::Const::VERSION = '0.05';
 }
 
 use strict;
@@ -12,11 +12,11 @@ LLVM::Const - LLVM const value class
 
 =head1 VERSION
 
-version 0.04
+version 0.05
 
 =head1 DESCRIPTION
 
-Some description here...
+A C<LLVM::Const> represents a constant value.
 
 =head1 METHODS
 

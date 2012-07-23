@@ -48,7 +48,7 @@
          "web" : "https://github.com/AlexBio/p5-LLVM"
       }
    },
-   "version" : "0.04",
+   "version" : "0.05",
    "x_Dist_Zilla" : {
       "plugins" : [
          {

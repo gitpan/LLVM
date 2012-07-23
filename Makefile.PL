@@ -25,9 +25,7 @@ my %WriteMakefileArgs = (
   'DISTNAME' => 'LLVM',
   'EXE_FILES' => [],
   'INC' => '-I.',
-  'LIBS' => [
-    '-lLLVM-3.1'
-  ],
+  'LIBS' => '-lLLVM-3.1',
   'LICENSE' => 'perl',
   'NAME' => 'LLVM',
   'OBJECT' => '$(O_FILES)',
@@ -36,7 +34,7 @@ my %WriteMakefileArgs = (
     'strict' => '0',
     'warnings' => '0'
   },
-  'VERSION' => '0.04',
+  'VERSION' => '0.05',
   'test' => {
     'TESTS' => 't/*.t'
   }

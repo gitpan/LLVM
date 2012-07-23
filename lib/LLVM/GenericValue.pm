@@ -1,6 +1,6 @@
 package LLVM::GenericValue;
 {
-  $LLVM::GenericValue::VERSION = '0.04';
+  $LLVM::GenericValue::VERSION = '0.05';
 }
 
 use strict;
@@ -12,7 +12,7 @@ LLVM::GenericValue - LLVM generic value class
 
 =head1 VERSION
 
-version 0.04
+version 0.05
 
 =head1 DESCRIPTION
 

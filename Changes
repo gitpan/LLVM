@@ -3,7 +3,47 @@ Changes from 2011-07-24 00:00:00 +0000 to present.
 ==================================================
 
 -----------------------------------------
-version 0.04 at 2012-07-23 10:19:04 +0000
+version 0.05 at 2012-07-23 18:05:13 +0000
+-----------------------------------------
+
+  Change: 4c765bfdaa1d9e3ff79e1c1eaa8d06619aafe6e4
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-07-23 19:06:09 +0000
+
+    Builder.pm: fixup *cmp predicates formatting 
+
+  Change: 39ac1328de1a1f852237ffe0172bec32e6478da9
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-07-23 16:20:54 +0000
+
+    MakeMaker.pm: LIBS should be just a string 
+
+  Change: 4bc0ef93884ab3730ae3ddd49e89cdf68637fc4a
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-07-23 16:17:35 +0000
+
+    Builder.xs: add br, call and select insts 
+
+  Change: ae549afa660f1fa04bdf027eaf62774a5eda9965
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-07-23 12:50:11 +0000
+
+    Value.xs: index is unsigned as count 
+
+  Change: 22bcbd4971d6705f842bdbe7cb6c003a1fb6d093
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-07-23 12:31:30 +0000
+
+    GenericValue.xs: to_uint actually returns an unsigned int 
+
+  Change: b1654250262d9df7499e09ae2401c112e182f0ac
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-07-23 12:28:53 +0000
+
+    Const.pm: add description 
+
+-----------------------------------------
+version 0.04 at 2012-07-23 10:18:48 +0000
 -----------------------------------------
 
   Change: c9b10a247cca2479f591e816a31bfe78b14f088c
