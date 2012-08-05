@@ -1,6 +1,6 @@
 package LLVM::Const;
 {
-  $LLVM::Const::VERSION = '0.05';
+  $LLVM::Const::VERSION = '0.06';
 }
 
 use strict;
@@ -12,7 +12,7 @@ LLVM::Const - LLVM const value class
 
 =head1 VERSION
 
-version 0.05
+version 0.06
 
 =head1 DESCRIPTION
 
@@ -28,10 +28,9 @@ Create a new constant integer L<LLVM::Value> with value C<$value>.
 
 Create a new constant real L<LLVM::Value> with value C<$value>.
 
-=head2 string( $ctx, $value )
+=head2 string( $value )
 
-Create a new constant string L<LLVM::Value> with value C<$value> given a
-L<LLVM::Context>.
+Create a new constant string L<LLVM::Value> with value C<$value>.
 
 =head1 AUTHOR
 

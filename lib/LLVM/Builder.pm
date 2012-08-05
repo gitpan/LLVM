@@ -1,6 +1,6 @@
 package LLVM::Builder;
 {
-  $LLVM::Builder::VERSION = '0.05';
+  $LLVM::Builder::VERSION = '0.06';
 }
 
 use strict;
@@ -12,7 +12,7 @@ LLVM::Builder - LLVM builder class
 
 =head1 VERSION
 
-version 0.05
+version 0.06
 
 =head1 DESCRIPTION
 
@@ -21,10 +21,9 @@ within a basic block.
 
 =head1 METHODS
 
-=head2 new( $ctx, $blk )
+=head2 new( $blk )
 
-Create a new C<LLVM::Builder> object given a L<LLVM::Context> and a
-L<LLVM::BasicBlock>.
+Create a new C<LLVM::Builder> object given a L<LLVM::BasicBlock>.
 
 =head1 TERMINATOR INSTRUCTIONS
 

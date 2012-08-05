@@ -1,6 +1,6 @@
 package LLVM::Type;
 {
-  $LLVM::Type::VERSION = '0.05';
+  $LLVM::Type::VERSION = '0.06';
 }
 
 use strict;
@@ -12,7 +12,7 @@ LLVM::Type - LLVM type class
 
 =head1 VERSION
 
-version 0.05
+version 0.06
 
 =head1 DESCRIPTION
 
@@ -20,22 +20,22 @@ A C<LLVM::Type> represents the type of an individual L<LLVM::Value>.
 
 =head1 METHODS
 
-=head2 void( $ctx )
+=head2 void( )
 
-Create a new C<LLVM::Type> representing a void given a L<LLVM::Context>.
+Create a new C<LLVM::Type> representing a void.
 
-=head2 int( $ctx, $bits )
+=head2 int( $bits )
 
 Create a new C<LLVM::Type> representing an integer with C<$bits> bits (e.g. 16,
-32, 64, ...) given a L<LLVM::Context>.
+32, 64, ...).
 
-=head2 float( $ctx )
+=head2 float( )
 
-Create a new C<LLVM::Type> representing a float given a L<LLVM::Context>.
+Create a new C<LLVM::Type> representing a float.
 
-=head2 double( $ctx )
+=head2 double( )
 
-Create a new C<LLVM::Type> representing a double given a L<LLVM::Context>.
+Create a new C<LLVM::Type> representing a double.
 
 =head2 func( $ret_type [, $arg_type ...] )
 

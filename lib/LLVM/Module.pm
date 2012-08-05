@@ -1,6 +1,6 @@
 package LLVM::Module;
 {
-  $LLVM::Module::VERSION = '0.05';
+  $LLVM::Module::VERSION = '0.06';
 }
 
 use strict;
@@ -12,7 +12,7 @@ LLVM::Module - LLVM module class
 
 =head1 VERSION
 
-version 0.05
+version 0.06
 
 =head1 DESCRIPTION
 
@@ -20,10 +20,9 @@ A C<LLVM::Module> is the top-level container for all the LLVM IR objects.
 
 =head1 METHODS
 
-=head2 new( $ctx, $id )
+=head2 new( $id )
 
-Create a new C<LLVM::Module> given its L<LLVM::Context> and a string
-representing its id (name).
+Create a new C<LLVM::Module> given a string representing its id (name).
 
 =head2 add_func( $func_name, $func_type )
 
