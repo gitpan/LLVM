@@ -1,6 +1,6 @@
-package LLVM::ExecutionEngine;
+package LLVM::Target;
 {
-  $LLVM::ExecutionEngine::VERSION = '0.07';
+  $LLVM::Target::VERSION = '0.07';
 }
 
 use strict;
@@ -8,7 +8,7 @@ use warnings;
 
 =head1 NAME
 
-LLVM::ExecutionEngine - LLVM execution engine class
+LLVM::Target - LLVM target class
 
 =head1 VERSION
 
@@ -16,18 +16,21 @@ version 0.07
 
 =head1 DESCRIPTION
 
-A C<LLVM::ExecutionEngine> represents a LLVM JIT engine.
+A C<LLVM::Target> represents a target for a specific architecture.
 
 =head1 METHODS
 
-=head2 new( $mod )
+=head2 targets( )
 
-Create a new C<LLVM::ExecutionEngine> for the L<LLVM::Module> C<$mod>.
+Retrieve a list of supported targets.
 
-=head2 run_func( $func [, $arg ... ] )
+=head2 name( )
 
-Run the function C<$func> (of type L<LLVM::Value>) with the given arguments of
-type L<LLVM::GenericValue>.
+Retrieve the name of the given C<LLVM::Target>.
+
+=head2 description( )
+
+Retrieve the description of the given C<LLVM::Target>.
 
 =head1 AUTHOR
 
@@ -45,4 +48,4 @@ See http://dev.perl.org/licenses/ for more information.
 
 =cut
 
-1; # End of LLVM::ExecutionEngine
+1; # End of LLVM::Target

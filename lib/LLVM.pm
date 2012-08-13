@@ -1,6 +1,6 @@
 package LLVM;
 {
-  $LLVM::VERSION = '0.06';
+  $LLVM::VERSION = '0.07';
 }
 
 use strict;
@@ -15,7 +15,7 @@ LLVM - Perl bindings to the Low Level Virtual Machine
 
 =head1 VERSION
 
-version 0.06
+version 0.07
 
 =head1 SYNOPSIS
 
@@ -84,6 +84,19 @@ And finally the module can be compiled in-memory and executed:
 
     say $result -> to_int;
 
+Or compiled to object code:
+
+    # get the first target available
+    my $target = LLVM::Target -> targets -> [0];
+
+    # create a target machine
+    my $tm = LLVM::TargetMachine -> create(
+      $target, 'x86_64-linux-gnu', 'penryn', ['64bit']
+    );
+
+    # emit the object code to disk
+    $tm -> emit($mod, 'synopsis.o', 1);
+
 =head1 DESCRIPTION
 
 The Low-Level Virtual Machine (LLVM) is a collection of libraries and tools
@@ -91,8 +104,7 @@ that make it easy to build compilers, optimizers, Just-In-Time code generators,
 and many other compiler-related programs. This module provides Perl bindings to
 the LLVM API.
 
-Note that this module is currently built and tested against LLVM v3.1, but
-chances are that it builds against older versions too.
+B<Note>: LLVM v3.1 is required to build this distribution.
 
 =head1 AUTHOR
 

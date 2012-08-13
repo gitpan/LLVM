@@ -13,11 +13,11 @@ my %WriteMakefileArgs = (
   'BUILD_REQUIRES' => {
     'Capture::Tiny' => '0',
     'File::Find' => '0',
+    'File::Slurp' => '0',
     'File::Temp' => '0',
     'Test::More' => '0'
   },
-  'CCFLAGS' => '-I/usr/lib/llvm-3.1/include  -DNDEBUG -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -g -O2 -fomit-frame-pointer -fPIC
-',
+  'CCFLAGS' => '-I/usr/lib/llvm-3.1/include  -DNDEBUG -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -g -O2 -fomit-frame-pointer -fPIC',
   'CONFIGURE_REQUIRES' => {
     'Devel::CheckLib' => '0',
     'ExtUtils::MakeMaker' => '6.30'
@@ -34,7 +34,7 @@ my %WriteMakefileArgs = (
     'strict' => '0',
     'warnings' => '0'
   },
-  'VERSION' => '0.06',
+  'VERSION' => '0.07',
   'test' => {
     'TESTS' => 't/*.t'
   }

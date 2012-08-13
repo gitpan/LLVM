@@ -17,6 +17,8 @@ lib/LLVM/ExecutionEngine.pm
 lib/LLVM/GenericValue.pm
 lib/LLVM/Module.pm
 lib/LLVM/PassManager.pm
+lib/LLVM/Target.pm
+lib/LLVM/TargetMachine.pm
 lib/LLVM/Transform.pm
 lib/LLVM/Type.pm
 lib/LLVM/Value.pm
@@ -33,5 +35,7 @@ xs/ExecutionEngine.xs
 xs/GenericValue.xs
 xs/Module.xs
 xs/PassManager.xs
+xs/Target.xs
+xs/TargetMachine.xs
 xs/Type.xs
 xs/Value.xs

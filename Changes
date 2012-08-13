@@ -1,9 +1,44 @@
 ==================================================
-Changes from 2011-08-06 00:00:00 +0000 to present.
+Changes from 2011-08-14 00:00:00 +0000 to present.
 ==================================================
 
 -----------------------------------------
-version 0.06 at 2012-08-05 21:44:47 +0000
+version 0.07 at 2012-08-13 18:29:44 +0000
+-----------------------------------------
+
+  Change: 5c58723237d5bc5abd71b9ced3b53eec5d050791
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-08-13 20:28:50 +0000
+
+    LLVM.pm: fix note about required LLVM version 
+
+  Change: 1686f32a5b35c26a06c5aad73394e8d627a9d2f9
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-08-13 20:26:31 +0000
+
+    xs: replace SvPVbyte with *_nolen where appropriate 
+
+  Change: de1cddee132effa6dc54ba791758891c19fac0e2
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-08-13 20:18:26 +0000
+
+    Target*.xs: initial support for TargetMachine 
+
+  Change: d77c5eb97e0cb81390824e1122c813f1d8bed338
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-08-13 11:32:35 +0000
+
+    TODO: ++ 
+
+  Change: 92a5bdbbd82cccf2833372cf3702c0d6abee4381
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-08-06 15:17:35 +0000
+
+    MakeMaker.pm: make llvm-config name configuration a little more
+    flexible 
+
+-----------------------------------------
+version 0.06 at 2012-08-05 21:38:57 +0000
 -----------------------------------------
 
   Change: aeab70742c6be20c21754defec3f1e8f483845c9

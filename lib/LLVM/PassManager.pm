@@ -1,6 +1,6 @@
 package LLVM::PassManager;
 {
-  $LLVM::PassManager::VERSION = '0.06';
+  $LLVM::PassManager::VERSION = '0.07';
 }
 
 use strict;
@@ -12,7 +12,7 @@ LLVM::PassManager - LLVM pass manager class
 
 =head1 VERSION
 
-version 0.06
+version 0.07
 
 =head1 DESCRIPTION
 
