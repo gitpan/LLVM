@@ -24,7 +24,7 @@ lib/LLVM/Type.pm
 lib/LLVM/Value.pm
 t/00-compile.t
 t/01-basic.t
-t/02-cond.t
+t/02-branch.t
 t/release-check-manifest.t
 t/release-pod-coverage.t
 t/release-pod-syntax.t

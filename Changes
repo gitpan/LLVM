@@ -1,9 +1,43 @@
 ==================================================
-Changes from 2011-08-14 00:00:00 +0000 to present.
+Changes from 2011-08-17 00:00:00 +0000 to present.
 ==================================================
 
 -----------------------------------------
-version 0.07 at 2012-08-13 18:29:44 +0000
+version 0.08 at 2012-08-16 19:08:02 +0000
+-----------------------------------------
+
+  Change: d233eccaf0ed9efc36e79c2ea9acdda2a0afd3b5
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-08-16 20:47:01 +0000
+
+    MakeMaker.pm: check llvm-config is present 
+
+  Change: 364bdac7b407c0e9b6b6fb40f26d7cabef4db7f4
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-08-16 20:27:31 +0000
+
+    Value.xs: name() gets and sets value's name 
+
+  Change: 3e94693537f69ff36722624e4f43040e67297940
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-08-16 20:08:15 +0000
+
+    02-cond.t: rename -> 02-branch.t 
+
+  Change: 3016a742c004495cdc399f036bfe51c43e0a5e12
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-08-16 20:05:29 +0000
+
+    Builder.xs: do not position at end on new() to allow re-use 
+
+  Change: 672e9c59af3b9b89f9af35f98ec762686d965430
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-08-13 20:36:45 +0000
+
+    TargetMachine.xs: fix SvPVbyte -> SvPVbyte_nolen 
+
+-----------------------------------------
+version 0.07 at 2012-08-13 18:28:50 +0000
 -----------------------------------------
 
   Change: 5c58723237d5bc5abd71b9ced3b53eec5d050791
