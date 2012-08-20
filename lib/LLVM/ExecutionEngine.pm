@@ -1,6 +1,6 @@
 package LLVM::ExecutionEngine;
 {
-  $LLVM::ExecutionEngine::VERSION = '0.08';
+  $LLVM::ExecutionEngine::VERSION = '0.09';
 }
 
 use strict;
@@ -12,7 +12,7 @@ LLVM::ExecutionEngine - LLVM execution engine class
 
 =head1 VERSION
 
-version 0.08
+version 0.09
 
 =head1 DESCRIPTION
 

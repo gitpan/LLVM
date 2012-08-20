@@ -1,9 +1,31 @@
 ==================================================
-Changes from 2011-08-17 00:00:00 +0000 to present.
+Changes from 2011-08-21 00:00:00 +0000 to present.
 ==================================================
 
 -----------------------------------------
-version 0.08 at 2012-08-16 19:08:02 +0000
+version 0.09 at 2012-08-20 19:53:10 +0000
+-----------------------------------------
+
+  Change: 79cfb0a6adfe7f430d249d1b2c9bccb62d65a61e
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-08-20 21:32:29 +0000
+
+    Builder.xs: fix trunc 
+
+  Change: f5794e709f5d1b90e8dd1bcb58f9260f95324bd9
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-08-20 21:26:18 +0000
+
+    Builder.xs: s/inst_name/result/ 
+
+  Change: 72b3d046ada3010a86a5a1abcc06437afff0f4f7
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-08-20 21:25:20 +0000
+
+    Builder.xs: add a couple of instructions 
+
+-----------------------------------------
+version 0.08 at 2012-08-16 18:47:01 +0000
 -----------------------------------------
 
   Change: d233eccaf0ed9efc36e79c2ea9acdda2a0afd3b5
