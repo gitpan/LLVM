@@ -1,6 +1,6 @@
 package LLVM::Transform;
 {
-  $LLVM::Transform::VERSION = '0.09';
+  $LLVM::Transform::VERSION = '0.10';
 }
 
 use strict;
@@ -12,7 +12,7 @@ LLVM::Transform - LLVM transformation class
 
 =head1 VERSION
 
-version 0.09
+version 0.10
 
 =head1 DESCRIPTION
 

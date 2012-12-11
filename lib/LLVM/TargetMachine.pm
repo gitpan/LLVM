@@ -1,6 +1,6 @@
 package LLVM::TargetMachine;
 {
-  $LLVM::TargetMachine::VERSION = '0.09';
+  $LLVM::TargetMachine::VERSION = '0.10';
 }
 
 use strict;
@@ -12,7 +12,7 @@ LLVM::TargetMachine - LLVM target machine class
 
 =head1 VERSION
 
-version 0.09
+version 0.10
 
 =head1 DESCRIPTION
 

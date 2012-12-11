@@ -1,6 +1,6 @@
 package LLVM::Value;
 {
-  $LLVM::Value::VERSION = '0.09';
+  $LLVM::Value::VERSION = '0.10';
 }
 
 use strict;
@@ -12,7 +12,7 @@ LLVM::Value - LLVM value class
 
 =head1 VERSION
 
-version 0.09
+version 0.10
 
 =head1 DESCRIPTION
 

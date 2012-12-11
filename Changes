@@ -1,333 +1,56 @@
-==================================================
-Changes from 2011-08-21 00:00:00 +0000 to present.
-==================================================
+Revision history for LLVM
 
------------------------------------------
-version 0.09 at 2012-08-20 19:53:10 +0000
------------------------------------------
+0.10      2012-12-11 11:32:44 Europe/Rome
 
-  Change: 79cfb0a6adfe7f430d249d1b2c9bccb62d65a61e
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2012-08-20 21:32:29 +0000
+ - Add a proper Changes file
+ - Improve build system
 
-    Builder.xs: fix trunc 
+0.09      2012-08-20 19:53:27 Europe/Rome
 
-  Change: f5794e709f5d1b90e8dd1bcb58f9260f95324bd9
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2012-08-20 21:26:18 +0000
+ - More instructions
 
-    Builder.xs: s/inst_name/result/ 
+0.08      2012-08-16 19:08:23 Europe/Rome
 
-  Change: 72b3d046ada3010a86a5a1abcc06437afff0f4f7
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2012-08-20 21:25:20 +0000
+ - Do not position a Builder on new() to allow re-use
+ - L::Value -> name() now gets and sets a value's name
 
-    Builder.xs: add a couple of instructions 
+0.07      2012-08-13 18:30:00 Europe/Rome
 
------------------------------------------
-version 0.08 at 2012-08-16 18:47:01 +0000
------------------------------------------
+ - Support for LLVM TargetMachine
+ - Make llvm-config script name configurable
+ - Require LLVM 3.1
 
-  Change: d233eccaf0ed9efc36e79c2ea9acdda2a0afd3b5
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2012-08-16 20:47:01 +0000
+0.06      2012-08-05 21:45:12 Europe/Rome
 
-    MakeMaker.pm: check llvm-config is present 
+ - Use a single global context to simplify the API
+ - Switch to Capture::Tiny in tests
 
-  Change: 364bdac7b407c0e9b6b6fb40f26d7cabef4db7f4
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2012-08-16 20:27:31 +0000
+0.05      2012-07-23 18:05:27 Europe/Rome
 
-    Value.xs: name() gets and sets value's name 
+ - Fix to_uint(9 to actually return an unsigned int
+ - Add br, call and select instructions
+ - Fix *cmp instructions predicate formatting
 
-  Change: 3e94693537f69ff36722624e4f43040e67297940
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2012-08-16 20:08:15 +0000
+0.04      2012-07-23 10:19:27 Europe/Rome
 
-    02-cond.t: rename -> 02-branch.t 
+ - Support LLVM const and global values
+ - Use a single 'add' method to schedule passes
+ - Add vectorize transformation pass
+ - Add scalar transformations passes
+ - Add void type
 
-  Change: 3016a742c004495cdc399f036bfe51c43e0a5e12
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2012-08-16 20:05:29 +0000
+0.03      2012-07-22 18:47:37 Europe/Rome
 
-    Builder.xs: do not position at end on new() to allow re-use 
+ - Fix llvm-config script name
+ - Add *cmp and cond instructions
+ - Support LLVM PassManager
 
-  Change: 672e9c59af3b9b89f9af35f98ec762686d965430
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2012-08-13 20:36:45 +0000
+0.02      2012-07-22 13:32:29 Europe/Rome
 
-    TargetMachine.xs: fix SvPVbyte -> SvPVbyte_nolen 
+ - Support LLVM ExecutionEngine and related GenericValue
+ - Support more LLVM instructions
+ - Fix typos in LLVM SYNOPSIS
 
------------------------------------------
-version 0.07 at 2012-08-13 18:28:50 +0000
------------------------------------------
+0.01      2012-07-22 11:26:19 Europe/Rome
 
-  Change: 5c58723237d5bc5abd71b9ced3b53eec5d050791
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2012-08-13 20:28:50 +0000
-
-    LLVM.pm: fix note about required LLVM version 
-
-  Change: 1686f32a5b35c26a06c5aad73394e8d627a9d2f9
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2012-08-13 20:26:31 +0000
-
-    xs: replace SvPVbyte with *_nolen where appropriate 
-
-  Change: de1cddee132effa6dc54ba791758891c19fac0e2
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2012-08-13 20:18:26 +0000
-
-    Target*.xs: initial support for TargetMachine 
-
-  Change: d77c5eb97e0cb81390824e1122c813f1d8bed338
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2012-08-13 11:32:35 +0000
-
-    TODO: ++ 
-
-  Change: 92a5bdbbd82cccf2833372cf3702c0d6abee4381
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2012-08-06 15:17:35 +0000
-
-    MakeMaker.pm: make llvm-config name configuration a little more
-    flexible 
-
------------------------------------------
-version 0.06 at 2012-08-05 21:38:57 +0000
------------------------------------------
-
-  Change: aeab70742c6be20c21754defec3f1e8f483845c9
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2012-08-05 23:38:57 +0000
-
-    t: switch to Capture::Tiny 
-
-  Change: 5f549541ee1e8324051cbd4332e1b7c2d74b9537
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2012-08-05 23:38:57 +0000
-
-    use the global context to simplify the interface a bit 
-
------------------------------------------
-version 0.05 at 2012-07-23 17:06:09 +0000
------------------------------------------
-
-  Change: 4c765bfdaa1d9e3ff79e1c1eaa8d06619aafe6e4
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2012-07-23 19:06:09 +0000
-
-    Builder.pm: fixup *cmp predicates formatting 
-
-  Change: 39ac1328de1a1f852237ffe0172bec32e6478da9
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2012-07-23 16:20:54 +0000
-
-    MakeMaker.pm: LIBS should be just a string 
-
-  Change: 4bc0ef93884ab3730ae3ddd49e89cdf68637fc4a
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2012-07-23 16:17:35 +0000
-
-    Builder.xs: add br, call and select insts 
-
-  Change: ae549afa660f1fa04bdf027eaf62774a5eda9965
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2012-07-23 12:50:11 +0000
-
-    Value.xs: index is unsigned as count 
-
-  Change: 22bcbd4971d6705f842bdbe7cb6c003a1fb6d093
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2012-07-23 12:31:30 +0000
-
-    GenericValue.xs: to_uint actually returns an unsigned int 
-
-  Change: b1654250262d9df7499e09ae2401c112e182f0ac
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2012-07-23 12:28:53 +0000
-
-    Const.pm: add description 
-
------------------------------------------
-version 0.04 at 2012-07-23 10:18:48 +0000
------------------------------------------
-
-  Change: c9b10a247cca2479f591e816a31bfe78b14f088c
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2012-07-23 12:18:48 +0000
-
-    Const.xs: implement LLVM constant values class 
-
-  Change: d75048d7f37d695aac2ab7696e26120afe9027bd
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2012-07-23 11:48:01 +0000
-
-    Value.xs: add methods for global values 
-
-  Change: a48dcd3bb7df76d64aebfae5fa93e5398c31bbfd
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2012-07-23 11:48:01 +0000
-
-    Module.xs: add globals and more func-releated methods 
-
-  Change: c33450bd86ac8a674ab8689359b20e06972ad03d
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2012-07-23 11:48:01 +0000
-
-    01-basic.t: test module dump after passes (just to make sure the
-    passmanager runs) 
-
-  Change: 83910baf75b4f41f0339fb7b37d59f0499b78abc
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2012-07-23 11:48:01 +0000
-
-    Types.xs: add void type 
-
-  Change: c2ab86bf5d6235caf85a08d03c1e3aa902ef156a
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2012-07-23 11:48:01 +0000
-
-    TODO: update 
-
-  Change: fb2965c0b874292cb3333f9236e155773ddf3065
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2012-07-23 10:34:36 +0000
-
-    PassManager.xs: add vectorize transformation pass 
-
-  Change: c3096a925686a27e046a207b9ca515461652f18c
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2012-07-23 10:30:39 +0000
-
-    PassManager.xs: add scalar transformations passes 
-
-  Change: 2ef86c4f60c2ff597179c286329e1af28478b3fe
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2012-07-23 10:08:27 +0000
-
-    PassManager.xs: use a single 'add' method to schedule passes 
-
-  Change: 9d6b2e9f9451a1ffe9874e05b7f69d5fcd20e250
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2012-07-22 20:50:22 +0000
-
-    Transform.pm: add link to L::T::IPO 
-
------------------------------------------
-version 0.03 at 2012-07-22 18:47:07 +0000
------------------------------------------
-
-  Change: 36ef4d028e1dcc5fc1f314319dc74f566a269c8f
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2012-07-22 20:47:07 +0000
-
-    PassManager.pm: ignore Pod::Coverage false positives 
-
-  Change: 913e1e92bc39c8ef6861e4e60e2bc3a8aa091624
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2012-07-22 20:40:22 +0000
-
-    TODO++ 
-
-  Change: 8cb4613e2e3fa99448424c96176ff536d6004dc1
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2012-07-22 20:40:22 +0000
-
-    lib: improve pass and transform docs 
-
-  Change: 10c43b9220864ec3889d40d100779d4f1bf6bb66
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2012-07-22 20:40:22 +0000
-
-    PassManager.xs: implement LLVM IPO transformations class 
-
-  Change: 5e8e26542846161a96d68d6b04bb5ed0b1d1f3e6
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2012-07-22 20:10:49 +0000
-
-    PassManager.xs: implement LLVM pass manager class 
-
-  Change: 91860da9f58940ae96b26d34438a6e006ca16095
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2012-07-22 19:41:53 +0000
-
-    Builder.xs: add *cmp and cond instructions 
-
-  Change: d894d3ad3f56da3f43bc151262b1074e96f74629
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2012-07-22 18:44:58 +0000
-
-    xs: remove newline after OUTPUT 
-
-  Change: 24b48f6f372cf190bd852bb6ffbce9eac67b6b54
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2012-07-22 16:03:23 +0000
-
-    LLVM.pm: add note about LLVM version 
-
-  Change: f9b0111476d7d1bff71f2f22a2ae162a1054f53f
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2012-07-22 15:58:40 +0000
-
-    MakeMaker.pm: fix LLVM config script name 
-
------------------------------------------
-version 0.02 at 2012-07-22 13:32:00 +0000
------------------------------------------
-
-  Change: 24810952ae2e0663b711f45bf4f7644dfd034961
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2012-07-22 15:32:00 +0000
-
-    ExecutionEngine.xs: implement the LLVM execution engine class 
-
-  Change: a030f8b145be36741b9e405e3023be3bc8049ff5
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2012-07-22 15:32:00 +0000
-
-    GenericValue.xs: implement the LLVM generic value class 
-
-  Change: 5e6365cc1ef0d6507a2b5c4560e0f8dd34b2b2d8
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2012-07-22 14:39:24 +0000
-
-    01-basic.t: test the dumped LLVM IR 
-
-  Change: ef25c0d9803ba4ce721030568b419b75cd9884ba
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2012-07-22 14:29:06 +0000
-
-    Builder.xs: add more instructions 
-
-  Change: cd496a1c9a4de4fc141e2a37fdb730e8b296173d
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2012-07-22 13:46:27 +0000
-
-    lib/LLVM: add descriptions 
-
-  Change: 0f56f9a113057e374c39f902b81eb92bc51648f9
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2012-07-22 13:30:14 +0000
-
-    LLVM.pm: fix typos in synopsis 
-
------------------------------------------
-version 0.01 at 2012-07-22 11:25:59 +0000
------------------------------------------
-
-  Change: c3b88fe7a9a567d4605b1833090af59e70d9d675
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2012-07-22 13:25:59 +0000
-
-    MANIFEST.SKIP: skip generated files 
-
-  Change: 8c7afd8a45ab40c392f21f4b235f8475f020a913
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date : 2012-07-22 13:13:50 +0000
-
-    initial commit 
-
-================
-End of releases.
-================
+ - Initial version
